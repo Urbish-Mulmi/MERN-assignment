@@ -1,11 +1,14 @@
- *{
+/* --------------------- Global Reset --------------------- */
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html{
    font-size: 16px;
 }
+
 html,
 body {
   height: 100%;
@@ -14,15 +17,13 @@ body {
 }
 
 
-/* Header wrapper */
+/* --------------------- Header wrapper --------------------- */
 header {
   background-color: black;
   
 }
 
-
-
-/* Navbar */
+/* --------------------- Navbar --------------------- */
 .navbar {
   /* border: 2px solid red; */
 
@@ -39,32 +40,12 @@ header {
   position: sticky; /* sticks at top while inside .home */
   top: 0;
   
-  
   background-color: black;
   z-index: 1000; 
   /* z index sets priority, high no = high priority */
-
-
-}
-
-
-
-/*  */
-.home {
-  position: relative; /* sticky parent boundary */
-  height: 100vh;
-  background-image: url("./Getty-Images-Loong-Kae-Chong-EyeEm-northern-lights.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* NAVBAR */
-.navbar {
-
 }
 
 /* -------logo---------- */
-
 .logo {
   color: white;
   
@@ -76,11 +57,9 @@ header {
 /* -----------------logo end-------------- */
 
 
-
 /* Navigation links */
 .links {
   /* border: 6px blue solid; */
-
 
   font-size: 1rem;
   display: flex;
@@ -96,40 +75,20 @@ header {
 }
 
 
-
-/* NOW going to  sections!!  */
-
-.home{
-  background-image:url("./Getty-Images-Loong-Kae-Chong-EyeEm-northern-lights.png");
-  height: 100vh; 
-
+/* --------------------- Home Section --------------------- */
+.home {
+  position: relative; /* sticky parent boundary, make child absolute positioning relative to this */
+  height: 100vh;
+  background-image: url("./Getty-Images-Loong-Kae-Chong-EyeEm-northern-lights.png");
   background-size: cover;  
   /* cover le occupies screen realestate left to right and top to bottom of applied section */
   background-repeat: no-repeat;
   /* avoids repeating of image to adjust specified dimension */
-
-}
---------------------------------------------------
-
-
-
-/* 4. Sections */
-.home {
-  position: relative;  /* make child absolute positioning relative to this */
-  
-  background-image: url("./Getty-Images-Loong-Kae-Chong-EyeEm-northern-lights.png");
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
- 
 }
 
 
-
-/* placing texts over background image */
+/* --------------------- Hero Text Overlay --------------------- */
 .hero {
-  
-  
   height: 400px;      /* any height you want */
   background-image: url('your-image.jpg');
   background-size: cover;
@@ -144,7 +103,6 @@ header {
 }
 
 .hero h1 {
-  
   bottom: 40%;
   left: 33%;
   font-size: 3rem;
@@ -158,7 +116,6 @@ header {
 }
 
 .btn1{
-
   position: absolute;
   bottom: 20%;
   left: 45%;
@@ -171,61 +128,103 @@ header {
 }
 
 
-
-/* aboutme section */
+/* --------------------- About Me Section --------------------- */
 .aboutme {
     background-color: #fdf5e6;
-  
-  
 }
 
 .aboutme h2{
   font-size: 2rem;
-  color:rgb(46, 116, 163);
+  color: #4c8b8f;
 
   text-align: center;
   /* text-align works for block elements! */
-  padding: 40px;
 }
 
 .aboutcontent{
   display: flex;
-  color:rgb(46, 116, 163);
+  
+  color: #4c8b8f;
   justify-content: center;
   /* align-items: center; */
   gap: 3rem;
   padding: 29px;
+  font-size: 16px;
+  letter-spacing: 3px;
+  line-height: 20px;
+  
+  
 }
 
 /*  about me section over!!*/
 
 
-/*skills section */
+/* --------------------- Skills Section --------------------- */
 .skills {
     background-color: #fdf5e6;
-  
+    padding: 50px 10%;
 }
 
 .skills h2{
-  font-size: 2rem;
-  color:rgb(46, 116, 163);
-
   text-align: center;
+  font-size: 32px;
+  color: #4c8b8f;
   /* text-align works for block elements! */
-  padding: 40px;
 }
 
+.skill p {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #4c8b8f;
+  font-weight: 500;
+}
 
-/* Services section */
+/* Slider Track */
+.skill-bar {
+  width: 100%;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+ 
+  margin-bottom: 20px;
+}
+
+/* Slider Fill */
+
+/* Slider Track */
+.skill-bar {
+  width: 100%;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  
+}
+
+/* Slider Fill (Static) */
+.skill-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #4c8b8f);
+}
+
+/* Individual Skill Levels */
+.skill-bar .html { width: 90%; }
+.skill-bar .css { width: 85%; }
+.skill-bar .js { width: 70%; }
+.skill-bar .responsive { width: 80%; }
+
+/* --------------------- Services Section --------------------- */
 .services {
     background-color: #fdf5e6;
-  
+    padding: 50px 10%;
 }
 
 .services h2{
   font-size: 2rem;
-  color:rgb(46, 116, 163);
-
+  color: #4c8b8f;
   text-align: center;
   /* text-align works for block elements! */
   padding: 40px;
@@ -239,28 +238,26 @@ header {
 }
 
 .servicebox{
-  
   background-color: white;
-  border: 2px black solid;
-  padding: 20px;
-  color:rgb(46, 116, 163);
+  padding: 20px 10px;
+  color: #4c8b8f;
   border-radius: 12px;
   line-height: 30px;
-  
 }
 
-/* portfolio section */
-.portfolio{  background-color: #fdf5e6;}
+
+/* --------------------- Portfolio Section --------------------- */
+.portfolio{
+  background-color: #fdf5e6;
+}
 
 .portfolio h2{
   font-size: 2rem;
-  color:rgb(46, 116, 163);
-
+  color: #4c8b8f;
   text-align: center;
   /* text-align works for block elements! */
   padding: 40px;
 }
-
 
 .portfoliocontent{
   display: flex;
@@ -270,31 +267,28 @@ header {
 }
 
 .portfoliobox{
-  
   background-color: white;
-  border: 2px black solid;
   padding: 20px;
-  color:rgb(46, 116, 163);
+  color: #4c8b8f;
   border-radius: 12px;
   line-height: 30px;
-  
 }
 
 .portfoliobox img {
-
   /* used gpt for thisss! */
     width: 100%;         /* Fill the width of the box */
     height: 200px;       /* Set your desired height here */
     object-fit: cover;   /* This prevents the photo from looking "stretched" */
 }
 
-/* testimonial sections */
 
-
-.testimonials{  background-color: #fdf5e6;}
+/* --------------------- Testimonials Section --------------------- */
+.testimonials{
+  background-color: #fdf5e6;
+}
 
 .testimonials h2{
-  color:rgb(46, 116, 163);
+  color: #4c8b8f;
   font-size: 2rem;
   text-align: center;
   /* text-align works for block elements! */
@@ -302,7 +296,6 @@ header {
 }
 
 .testimonials-statements{
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -311,64 +304,46 @@ header {
 }
 
 .statements{
-  color:rgb(46, 116, 163);
+  color: #4c8b8f;
   background-color: white;
-  width: 49%;
+  width: 700px;
   padding: 20px;
   border-radius: 5px;
-
-  border-left: 5px solid green;  
+  border-left: 5px solid #4c8b8f;;  
 }
 
-/* contact section */
 
+/* --------------------- Contact Section --------------------- */
 .contact{
   background-color: #fdf5e6;
-padding-bottom: 30px;}
+  padding-bottom: 30px;
+}
 
 .contact h2{
-  color:rgb(46, 116, 163);
+  color: #4c8b8f;
   font-size: 2rem;
-
   text-align: center;
   /* text-align works for block elements! */
   padding: 40px;
 }
 
-
 /* This is the white card */
 .inputcontainer{
-  
   background-color: white;
- 
-    padding: 40px;       
+  padding: 40px;       
   /* Adds space inside the white box */
-   margin: 0 auto; /* Centers the white box horizontally */
+  margin: 0 auto; /* Centers the white box horizontally */
   border-radius: 15px;
-   width: 700px;
+  width: 700px;
 }
-
-
-
 
 .inputcontainer form{
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-   width: 100%;  
-   
+  width: 100%;  
 }
 
-
-/* gemini for contact */
-.contact {
-  background-color: #fdf5e6; /* A soft beige similar to your screenshot */
- 
-  text-align: center;
-}
-
-
-/* Style for all text fields */
 .inputcontainer input, 
 .inputcontainer textarea {
    width: 100%; 
@@ -376,23 +351,45 @@ padding-bottom: 30px;}
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 14px;
-  
 }
 
-/* footer section */
-.tail{
+.submit{
+  color: white;
+  background-color: #4c8b8f;
+  border-radius: 20px;
+  padding: 10px;
+  width: 190px;
+}
+
+/* --------------------- Footer Section --------------------- */
+.tail {
   background-color: black;
-  height: 3rem;
-  text-align: center;
+  padding: 20px ;            /* vertical spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;                  /* space between copyright & socials */
 }
 
 .tail p{
   color: white;
 }
 
-.socials a{
-  color:whitesmoke;
-  margin: 1px;
+/* Social links row */
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.socials a {
+  text-decoration: none;
+  font-size: 16px;
 }
 
 
+/* --------------------- Uniform Section Padding --------------------- */
+.skills, .aboutme, .portfolio, .testimonials {
+  background-color: #fdf5e6;
+  padding: 33px 10%;
+}
