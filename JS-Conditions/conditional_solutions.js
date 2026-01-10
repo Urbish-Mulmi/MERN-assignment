@@ -18,7 +18,7 @@ else {
 let n1 = 30;
 if (n1 % 2 == 0) { console.log("Even"); }
 else {
-  console.log("Not Odd");
+  console.log(" Odd");
 }
 
 // Q4 Vowel or Consonant
@@ -190,20 +190,29 @@ else{
 
 
 // Q24 Prime Check
-let prime = 4;
-let isprime = true;
-if (prime <= 1) {
-  isprime=false;
-}
-else {
-  for (let nmbr = 2; nmbr < prime; nmbr++) {
-    if (prime % nmbr === 0) {
-      isprime = false;
-      break;
+// if input_no is divisible only by 1 and itself that's prime number
+// logic: divide input_no from[ n=2 to n=sqrt(input_no) ]
+// if it is divisible then that is not a prime
+
+let inp_no = 31;
+let isPrime = true;
+
+if (inp_no <= 1) {
+    isPrime = false;
+} else {
+    for (let p = 2; p <= Math.floor(Math.sqrt(inp_no)); p++) {
+        if (inp_no % p === 0) {
+            isPrime = false;
+            break; // stop the loop as soon as a factor is found
+        }
     }
-  }
 }
 
+if (isPrime) {
+    console.log(inp_no + " is a Prime number");
+} else {
+    console.log(inp_no + " is not a Prime number");
+}
 
 // Q25 Eligible for Discount(>65)
 let disc_age = 23;
@@ -407,7 +416,7 @@ else{
 }
 
 // Q45 Check if number is odd or even
-let user_number = 34;
+let user_number = 3;
 if(user_number % 2 == 0){
   console.log("Even number");
 }
@@ -416,7 +425,7 @@ else{
 }
 
 // Q46 Check if character is digit between 0 to 9
-let user_digit = "4" //string type
+let user_digit = "455" //string type
 if(user_digit>=0 && user_digit<=9){
   console.log("Digit");
 }
