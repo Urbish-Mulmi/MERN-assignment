@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href=""> logo</a>
+    </div>
+    
+    <nav>
+      <a href="#AboutMe">About Me</a><br>
+      <a href="#Hobbies">Hobbies</a><br>
+      <a href="#Education">Education</a><br>
+      <a href="#Travel">Travel</a><br>
+      <a href="#Music">Music</a><br>
+      <a href="#Contact">Contact</a><br>
+      <a href="#Note">Notes</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Welcome to my Portfolio</h1>
+      <p>Hello! My name is <b>Urbish Mulmi</b>. I am a <del>student</del> learning web development.</p>
+    </section>
+    <hr>
+    
+    
+    <section id="Aboutme"></section>
+    <h2>About Me</h2>
+    I love <i>coding,</i> <u>designing websites,</u> and exploring <mark>new technologies.</mark> <br>
+
+    <img src="./Screenshot 2025-12-18 133233.png" alt="my photo">
+    </section>
+    <hr>
+
+    <section id="Hobbies">
+      <ol type="a">
+        <li>Coding
+          <ul>
+            <li>javascript</li>
+            <li>python</li>
+            <li>c++</li>
+          </ul>
+        </li>
+        <li>Travelling</li>
+        <li>Photography</li>
+      </ol>
+    </section>
+    <hr>
+
+    <section id="Education">
+      <table border="1">
+        <tr>
+          <th>Year</th>
+          <th>Qualification</th>
+          <th>Institute</th>
+        </tr>
+
+        <tr>
+          <td>2019</td>
+          <td>High school</td>
+          <td>United Academy</td>
+        </tr>
+
+        <tr>
+          <td>2021</td>
+          <td>school</td>
+          <td>United Academy</td>
+        </tr>
+      </table>
+    </section>
+    <hr>
+
+    <section id="Travel">
+      <h4>My Favorite Place</h4>
+      <p>I love visiting <mark>Pokhara, Nepal.</mark>Here's a video about it:</p>
+
+      <br>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ABWZ2fuvLCw?si=uxgGeVyDUEYUnsV1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+    <hr>
+    
+    <section id="Music">
+      <h4>My Favorite Music</h4>
+      <ol type="1">
+        <li>Lost on you - LP</li>
+        <li>Carnival of rust - Poets of the fall</li>
+      </ol>
+      <audio src="./soft-bells-sounds.mp3"  controls></audio>
+    </section>
+    <hr>
+
+    <section id="Contact"> 
+      <h4>Contact Me</h4>
+      <form action="">
+        <label for="FullName">FullName</label>
+        <input type="text" id="FullName" name="FullName" placeholder="Enter name" required>
+
+        <br><br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+
+        <br>
+        <label>Gender</label>
+
+        <input type="radio" name="gender" id="Male" value="Male" required>
+        <label for="Male">Male</label>
+
+        <input type="radio" name="gender" id="Female" value="Female">
+        <label for="Female">Female</label>
+        
+        <input type="radio" name="gender" id="Other" value="Other">
+        <label for="Other">Other</label>
+
+        <br><br>
+        <label for="">Course Interested:</label>
+
+        <input type="checkbox" name="course" id="html" value="html" required>
+        <label for="html">HTML</label>
+
+        <input type="checkbox" name="course" id="css" value="css">
+        <label for="">CSS</label>
+
+        <input type="checkbox" name="course" id="js" value="js">
+        <label for="js">JS</label>
+
+        <br><br>
+        <label for="">Country</label>
+        <select name="country" id="">
+          <option value="Nepal">Nepal</option>
+          <option value="China">China</option>
+          <option value="India">India</option>
+          <option value="USA">USA</option>
+        </select>
+
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" minlength="5">
+
+        <br><br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+
+    <hr><br>
+    <section id="Note">
+      <h6>NOTES:</h6>
+      <pre>
+        Theres two type of input categorization:
+        1)Open input: Users can give unique values
+
+          eg.input type=[text, tel, password, email]
+          here attributes used are:
+            label for, input type, id, name,placeholder
+          in backend values are passed as:
+            key:value ; 
+            using attributes:-
+              name: value 
+              (name is defined in input attribute and
+               value is passed via user entered uniq value)  
+
+        2)Closed input: Users are to choose a value from displayed options
+
+          eg.checkbox, radio, select(dropdown)
+          here attributes used are:
+           label for, input type,select tag, id, name, value
+          in backend values are passed as:
+            key:value ; 
+            using attributes:-
+              name: value (both are attributes defined along input tag)
+      </pre>
+    </section>
+
+
+
+  </main>
+
+    <hr>
+    <footer>
+      <p>© 2025 Urbish Mulmi | All rights are reserved</p>
+      <p>
+        <a href="mailto:itsformaills@gmail.com">Mail </a>
+        <a href="tel:+977-9845599053">Call</a>
+      </p>
+    
+    </footer>
+
+  
+</body>
+</html>
