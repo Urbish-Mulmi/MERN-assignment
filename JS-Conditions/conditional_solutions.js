@@ -1,3 +1,4 @@
+// Complete solutions of 50 Conditional QS
 // Q1  Age check with if else:
 let age = 30;
 if (age >= 18) { console.log("Adult"); }
