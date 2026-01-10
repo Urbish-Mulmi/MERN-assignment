@@ -1,4 +1,5 @@
 // Complete 50 conditional qs grouped for ease of revision
+
 // ============================================
 // GROUP 1 - Basic Conditionals / Comparison
 // ============================================
@@ -77,7 +78,7 @@ else{ console.log("Second is greater"); }
 // Q3 Odd/Even
 let n1 = 30;
 if (num % 2 == 0) { console.log("Even"); }
-else { console.log("Not Odd"); }
+else { console.log(" Odd"); }
 
 // Q6 Multiple of five check 
 let no = 6;
@@ -99,17 +100,30 @@ let r = 3;
 if (r % 3 == 0) { console.log("Divisible by 3"); }
 else { console.log("Not divisible by 3"); }
 
+
 // Q24 Prime Check
-let prime = 20;
-let isprime = 1;
-if (prime < 1) { console.log("Enter valid no"); }
-else {
-  for (let nmbr = 2; nmbr < prime; nmbr++) {
-    if (prime % nmbr == 0) {
-      isprime = 0;
-      break;
+// if input_no is divisible only by 1 and itself that's prime number
+// logic: divide input_no from[ n=2 to n=sqrt(input_no) ]
+// if it is divisible then that is not a prime
+
+let inp_no = 31;
+let isPrime = true;
+
+if (inp_no <= 1) {
+    isPrime = false;
+} else {
+    for (let p = 2; p <= Math.floor(Math.sqrt(inp_no)); p++) {
+        if (inp_no % p === 0) {
+            isPrime = false;
+            break; // stop the loop as soon as a factor is found
+        }
     }
-  }
+}
+
+if (isPrime) {
+    console.log(inp_no + " is a Prime number");
+} else {
+    console.log(inp_no + " is not a Prime number");
 }
 
 
