@@ -1,4 +1,4 @@
-// LOOPS in js 
+// 19 JS LOOPS Q solutions
 
 // Q1 Count 1 to 20
 console.log("Q1:")
@@ -168,3 +168,4 @@ for(let i=2; count_prime<5; i++)
 }}
 
 console.log("Sum of first 5 primes = " + sum_prime + ", count = " + count_prime);
+
