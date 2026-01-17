@@ -1,23 +1,6 @@
-// Traversing in an array
-  /* There are 4 main ways to traverse arrays: 3 loops and 1 method-based approach
-    
-      1. for loop   → classic loop using index
-      2. for...in   → loops through indexes (keys) of the array
-      3. for...of   → loops through values (elements) of the array
-      4. forEach()  → higher-order function (HOF); 
-                      takes a callback function as argument callback parameters order: (value, index, array)
-  */
-//
+// SEE Notes at end for revision of theoreticals
 
-// Important Terms and their	Meaning
-  /*
-  First-class function	= A function where, functions are treated like values
-  Higher-Order Function (HOF) =	A function that takes/returns another function
-  Callback function	= Function passed into another function
-  */
-// 
-
-//  JS 35 Array QS (Part 2) 
+//  JS 35 Array QS (Part 2)  complete solution
 // Q1 const arr = [1, 2, 3, 4, 5]; WAP to print all elements using forEach().
 const arr1 = [1, 2, 3, 4, 5];
 arr1.forEach(function(values){
@@ -215,4 +198,119 @@ let arr35Result = arr35.reduce((acc, value)=>{
 console.log(arr35Result);
 
 
-// REMAINING QUESTIONS: Q11, Q13,Q17, Q18, Q19, Q21, Q23, Q24, Q27, Q32, Q34
+// Below are tricky Qs Solved: 11, 13, 17, 18, 19, 22, 23, 24, 27, 32, 34:-
+
+// Q11 const arr = [100, 200, 300]; WAP to extract the first two elements using destructuring
+const arr11 = [100, 200, 300];
+let [a,b,c]=arr11;
+console.log("Destructure arrays are a,b,c and values are respectively = "+a,b,c)
+
+
+// Q13   const arr = [1, 2, 2, 3, 4, 4];WAP to remove duplicate elements
+const arr13 = [1, 2, 2, 3, 4, 4];
+
+// use new Set() to filter and return unique elements from array, removes duplicates
+// use spread operator to store the unique elements in an array
+const arr13Result = [...new Set(arr13)];
+console.log(arr13Result);
+
+arr13.length !== arr13Result.length ?console.log("Duplicates found and removed"):console.log("Duplicates not found ");
+
+
+// Q17 const fruits = ["apple", "banana", "mango"];WAP to convert all elements to uppercase.
+const fruits17 = ["apple", "banana", "mango"];
+console.log("Converting fruits names to Uppercase:")
+for(let value of fruits17){
+console.log(value.toUpperCase());
+}
+
+// Q18 const words = ["cat", "elephant", "dog"]; WAP to filter words with length greater than 3.
+const words18 = ["cat", "elephant", "dog"];
+let words18Result = words18.filter(function(value){
+  if(value.length > 3){return value}
+})
+console.log(words18Result);
+
+
+// Q19 const arr = [12, 45, 7, 89];WAP to find the maximum value using reduce().
+const arr19 = [12, 45, 7, 89];
+
+let arr19Result = arr19.reduce(function (acc, currentv) {
+  if (acc > currentv) {
+    return acc;
+  } 
+  else {
+    return currentv;
+  }
+
+}, 0);
+
+console.log("Max value in array found using reduce method = "+arr19Result); 
+
+
+// Q21 const arr = [1, [2, 3], [4, 5]]; WAP to flatten the array
+const arr21 = [1, [2, 3], [4, 5]];
+const result21 = arr21.flat();
+console.log(result21); // [1, 2, 3, 4, 5]
+
+
+// Q23 const arr = [3, 6, 9, 12]; WAP to check whether the array is sorted.
+const arr23 = [3, 6, 9, 12]; 
+
+const isSorted = arr23.every((value, index, array) => {
+  if (index === 0) return true;           // skip first element
+  return array[index - 1] <= value;       // compare previous with current
+});
+
+console.log(isSorted); // true
+
+
+// Q24 const arr = [1, 2, 3, 4, 5]; WAP to rotate the array to the right by one position
+const arr24 = [1, 2, 3, 4, 5];
+arr24.unshift(arr24.pop());
+console.log(arr24);
+
+
+// Q27 const arr = ["a", "b", "c"]; WAP to join all elements into a single string.
+const arr27 = ["a", "b", "c"];
+let arr27Result = arr27.join("");
+console.log(arr27Result);
+
+
+// Q32 const arr = ["ram", "shyam", "hari"];WAP to capitalize the first letter of each string
+const arr32 = ["ram", "shyam", "hari"];
+const arr32Result = arr32.map(function(value) {
+  return value[0].toUpperCase() + value.slice(1);
+});
+console.log(arr32Result); // ["Ram", "Shyam", "Hari"]
+
+
+// Q34 const arr = [10, 20, 20, 30, 30];WAP to remove duplicate values.
+const arr34 = [10, 20, 20, 30, 30];
+// duplicates can be easily removed using:- new Set(array-name)
+let arr34Result=[...new Set(arr34)];
+console.log(arr34Result);
+
+
+
+
+// Theoretical NOTESSSS:-
+
+// Traversing in an array
+  /* There are 4 main ways to traverse arrays: 3 loops and 1 method-based approach
+    
+      1. for loop   → classic loop using index
+      2. for...in   → loops through indexes (keys) of the array
+      3. for...of   → loops through values (elements) of the array
+      4. forEach()  → higher-order function (HOF); 
+                      takes a callback function as argument callback parameters order: (value, index, array)
+  */
+//
+
+// Important Terms and their	Meaning
+  /*
+  First-class function	= A function where, functions are treated like values
+  Higher-Order Function (HOF) =	A function that takes/returns another function
+  Callback function	= Function passed into another function
+  */
+// 
